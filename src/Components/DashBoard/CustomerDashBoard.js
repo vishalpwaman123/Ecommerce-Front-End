@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import Header from "./Header";
-import "./AdminDashBoard.scss";
-
-export class AdminDashBoard extends Component {
+import Header from "./Header.js";
+import "./CustomerDashBoard.scss";
+export class CustomerDashBoard extends Component {
   constructor() {
     super();
     this.state = {
-      user: "Admin",
+      user: "User",
       DrawerFlag: false,
     };
   }
@@ -15,9 +14,11 @@ export class AdminDashBoard extends Component {
     console.log("Flag : ", Flag);
     this.setState({ DrawerFlag: !Flag });
   };
+
   render() {
+    console.log(this.state);
     return (
-      <div className="AdminDashBoard_Container">
+      <div className="CustomerDashBoard_Container">
         <div className="SubContainer">
           <div className="Header">
             <Header data={this.state} dataFunction={this.SetDrawer} />
@@ -34,4 +35,4 @@ export class AdminDashBoard extends Component {
   }
 }
 
-export default AdminDashBoard;
+export default CustomerDashBoard;

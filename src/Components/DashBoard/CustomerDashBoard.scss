@@ -1,26 +1,23 @@
 .Board {
   border: 0.5px solid lightgray;
 }
-
 .DarkBoard {
   border: 0.5px black solid;
 }
 
-@mixin Flex($Justice, $Align) {
+@mixin Flex($justice, $align) {
   display: flex;
-  justify-content: $Justice;
-  align-items: $Align;
+  justify-content: $justice;
+  align-items: $align;
 }
 
-.AdminDashBoard_Container {
-  width: 100%;
+.CustomerDashBoard_Container {
   height: 100%;
+  width: 100%;
   @include Flex(center, center);
   .SubContainer {
-    width: 99%;
     height: 99%;
-    @extend .Board;
-    border-radius: 10px;
+    width: 99%;
   }
   .Header {
     height: 10.3%;
