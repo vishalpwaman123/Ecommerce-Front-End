@@ -1,0 +1,13 @@
+.Board {
+  border: 0.5px solid lightgray;
+}
+
+.AdminDashBoard_Container {
+  width: 100%;
+  height: 100%;
+  .SubContainer {
+    width: 99%;
+    height: 99%;
+    @extend .Board;
+  }
+}
