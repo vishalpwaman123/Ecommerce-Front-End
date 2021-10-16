@@ -4,12 +4,16 @@
   align-items: $AlignItems;
 }
 
+.Border {
+  border: 0.5px solid lightgrey;
+}
+
 .SignUp_Container {
   height: 100%;
   width: 100%;
   @include flex(center, center);
   .SubContainer {
-    height: 80%;
+    height: 85%;
     width: 800px;
     border: 0.5px solid lightgray;
     border-radius: 15px;
@@ -22,15 +26,16 @@
       .HeaderName {
         font-size: 25px;
         color: blue;
-        margin: 30px 0 0 30px;
-        @include flex(start, center);
+        margin: 20px 0 0 30px;
+        @include flex(flex-start, center);
         // border: 0.5px solid lightgray;
       }
 
       .SubHeader {
         font-size: 25px;
         margin: 20px 0 30px 30px;
-        @include flex(start, center);
+        @include flex(flex-start, center);
+        // font-family: cursive;
         // border: 0.5px solid lightgray;
       }
 
@@ -59,7 +64,7 @@
         }
 
         .EmailHelperText {
-          @include flex(start, center);
+          @include flex(flex-start, center);
           font-size: 14px;
         }
 
@@ -71,7 +76,7 @@
           }
         }
         .PasswordHelperText {
-          @include flex(start, center);
+          @include flex(flex-start, center);
           font-size: 14px;
         }
 
@@ -80,6 +85,28 @@
           margin: 10px 0 0 0;
           .ShowPasswordText {
             @include flex(center, center);
+          }
+        }
+
+        .Roles {
+          width: 100%;
+          // @extend .Border;
+          display: flex;
+          .Text {
+            width: 15%;
+            // @extend .Border;
+            @include flex(flex-start, center);
+            font-size: 16px;
+            font-weight: 600;
+          }
+          .RolesRadioGroup {
+            // @extend .Border;
+            width: 60%;
+            display: block;
+            .UserRole {
+              width: 40%;
+              // @extend .Border;
+            }
           }
         }
 
